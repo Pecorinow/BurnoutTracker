@@ -53,8 +53,6 @@ h2 {
         flex-direction: column;
         gap: 3.5rem;
 
-
-
         fieldset {
             border-left : 2px solid var(--h2-color);
             border-bottom: 2px solid var(--h2-color);
@@ -76,22 +74,12 @@ h2 {
                 flex-direction: row;
                 gap: 1rem;
                 padding:0.5rem;
-
-                /*input{
-                    accent-color: var(--btn-light);
-                    &:checked {
-                       accent-color: #FF7D4A;
-                    }
-                }*/
             }
-
         }
     }
-
-    
-
 }
 
+/*!  NE PAS EFFACER */
 /* .section-resultats-hide {
     display:none;
 } */
