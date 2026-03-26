@@ -23,6 +23,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     min-height:100vh;
@@ -127,8 +131,8 @@ header {
 h1 {
     color:white;
     text-align: center;
-    font-style: italic;
-    font-weight: 200;
+    /* font-style: italic; */
+    font-weight: 600;
     font-size: 2rem;
     font-family: "Inter", sans-serif;
     padding-bottom:1rem;

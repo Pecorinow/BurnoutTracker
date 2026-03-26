@@ -1,50 +1,42 @@
-//!--------------------------------------------
-//! Page 3 : Carte + Recherche de thérapeutes
-//!--------------------------------------------
 
-
-// -------------------------
-// 1. Sélection du formulaire
-// -------------------------
+//* -------------------------
+//* 1. Sélection du formulaire
+//* -------------------------
 const FORM_PSYS = document.getElementById('form-psys');
-
-// URL du JSON
 const URL_PSYS = "../API/db.json";
 
 
 
-// -------------------------------------------------------------
-// 2. Fonction : charger la liste des psys depuis db.json via fetch
-// -------------------------------------------------------------
+//* -------------------------------------------------------------
+//* 2. Fonction : charger la liste des psys depuis db.json via fetch
+//* -------------------------------------------------------------
 async function chargerPsys() {
 
     try {
         const REPONSE = await fetch(URL_PSYS);
 
-        // Vérification de base
+     
         if (!REPONSE.ok) {
             throw new Error("Erreur HTTP : " + REPONSE.status);
         }
 
-        // On convertit la réponse en JS
         const PSYS = await REPONSE.json();
 
         return PSYS;
 
     } catch (erreur) {
         console.error("❌ Impossible de charger le JSON :", erreur);
-        return []; // retourne un tableau vide pour éviter les crash
+        return [];
     }
-}
+};
 
 
-
-// ---------------------------------------------
-// 3. Fonction : calcul de distance (Haversine)
-// ---------------------------------------------
+//* ---------------------------------------------
+//* 3. Fonction : calcul de distance (Haversine)
+//* ---------------------------------------------
 function calculerDistance(lat1, lon1, lat2, lon2) {
 
-    const R = 6371; // Rayon de la Terre en km
+    const R = 6371;
 
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
@@ -61,31 +53,25 @@ function calculerDistance(lat1, lon1, lat2, lon2) {
 }
 
 
-
-// ----------------------------------------------------
-// 4. Fonction : afficher la carte + marqueurs Leaflet
-// ----------------------------------------------------
+//* ----------------------------------------------------
+//* 4. Fonction : afficher la carte + marqueurs Leaflet
+//* ----------------------------------------------------
 function afficherCarte(latUser, lonUser, psys) {
 
-    // Si une carte existe déjà → on la supprime
     if (window.CARTE) {
         window.CARTE.remove();
     }
 
-    // Création de la carte centrée sur l'utilisateur
     window.CARTE = L.map("carte").setView([latUser, lonUser], 13);
 
-    // Fond de carte OSM
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution: "© OpenStreetMap"
     }).addTo(window.CARTE);
 
-    // Marqueur utilisateur
     L.marker([latUser, lonUser])
         .addTo(window.CARTE)
         .bindPopup("<b>Position estimée</b>");
 
-    // Marqueurs psys
     psys.forEach(psy => {
 
         L.marker([psy.latitude, psy.longitude])
@@ -101,13 +87,12 @@ function afficherCarte(latUser, lonUser, psys) {
 
 
 
-// ----------------------------------------------------
-// 5. EVENT : Soumission du formulaire de recherche
-// ----------------------------------------------------
+//* ----------------------------------------------------
+//* 5. EVENT : Soumission du formulaire de recherche
+//* ----------------------------------------------------
 FORM_PSYS.addEventListener('submit', async function(event) {
 
-    event.preventDefault(); // On bloque le rechargement automatique
-
+    event.preventDefault();
 
     // -------------------------
     // A. Lecture des inputs
@@ -116,12 +101,10 @@ FORM_PSYS.addEventListener('submit', async function(event) {
     const SPECIALISATION = document.getElementById('specialisation').value;
 
 
-    // Vérification de base
     if (!CODE_POSTAL || !SPECIALISATION) {
         alert("Veuillez remplir tous les champs.");
         return;
     }
-
 
     // -------------------------
     // B. Charger les psys
@@ -132,7 +115,6 @@ FORM_PSYS.addEventListener('submit', async function(event) {
         alert("Impossible de récupérer les thérapeutes.");
         return;
     }
-
 
     // -------------------------
     // C. Filtrer selon le code postal et la spécialisation

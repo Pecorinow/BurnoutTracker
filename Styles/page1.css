@@ -23,7 +23,22 @@ main {
         align-items: center;
         gap:2rem;
         padding-bottom: 2rem;
-        width:80%;
+        width:70%;
+
+        
+    }
+
+    .presentationsBurnouts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap:2rem;
+        width:100%;
+
+        h2 {
+            width:80%;
+        }
 
         .hexaBurnouts {
             display: flex;
@@ -58,17 +73,7 @@ main {
                     justify-content: center;
                     align-items: center;
                     gap:0.5rem;
-
-                    /* i {
-                        font-size: 1.5rem;
-                        visibility:hidden;
-                    } */
                 }
-
-                /* a:hover i {
-                    visibility: visible;
-                } */
-              
 
                 .professionnel {
                     position:absolute;
@@ -95,20 +100,6 @@ main {
             .hexagone:hover {
                 transform: translateY(-10px);
             }
-        }
-    }
-
-    
-    .presentationsBurnouts {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap:2rem;
-        width:100%;
-
-        h2 {
-            width:80%;
         }
 
         .categoriesBurnout {
@@ -156,13 +147,15 @@ main {
 
                 .infoBurnout {
                     max-width:80%;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap:1rem;
                     
                     p {
                         padding-bottom:0.5rem;
-
                     }
-
-                    
                 }
             }
             .catPro, .catRel, .catPost {
