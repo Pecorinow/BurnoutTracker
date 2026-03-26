@@ -92,9 +92,9 @@ h2 {
 
 }
 
-.section-resultats-hide {
-    display:none; /*TODO remettre en none*/
-}
+/* .section-resultats-hide {
+    display:none;
+} */
 
 .section-resultats-show {
     display: flex;

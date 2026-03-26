@@ -37,12 +37,14 @@ main {
             .hexagone {
                 position: relative;
                 margin:auto;
+                display: block;
+                transition: transform 200ms ease-out;
 
                 img {
                     width: 150px;
                 }
 
-                a {
+                span {
                     position:absolute;
                     top:40%;
                     margin:auto;
@@ -57,17 +59,15 @@ main {
                     align-items: center;
                     gap:0.5rem;
 
-                    i {
+                    /* i {
                         font-size: 1.5rem;
                         visibility:hidden;
-                    }
+                    } */
+                }
 
-                    
-                    
-                }
-                a:hover i {
+                /* a:hover i {
                     visibility: visible;
-                }
+                } */
               
 
                 .professionnel {
@@ -90,7 +90,11 @@ main {
                     position:absolute;
                     left:8%;
                 }
-            }            
+            }
+            
+            .hexagone:hover {
+                transform: translateY(-10px);
+            }
         }
     }
 
