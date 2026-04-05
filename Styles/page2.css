@@ -7,12 +7,10 @@
     --h2-color :#DE3F00;
     --twilight-categoriesBurnout : #CC4510;
     --btn-light: #FF7D4A;
-    --btn-dark: #C45124;
-    --btn-border:#F39D7B;
-    --btn-mode-border : #CEEFFA;
+    --btn-dark: #e3561f;
 
     --text-a-font : "Kumbh Sans", sans-serif;
-    --h1-h2-font : "Winky Sans", sans-serif;
+    --h1-h2-font : "Marmelad", sans-serif;
 }
 
 h2 {
@@ -79,10 +77,10 @@ h2 {
     }
 }
 
-/*!  NE PAS EFFACER */
-/* .section-resultats-hide {
+/*!  NE PAS EFFACER, À REMETTRE EN PLACE APRÈS RÉGLAGES */
+.section-resultats-hide {
     display:none;
-} */
+}
 
 .section-resultats-show {
     display: flex;
@@ -165,13 +163,13 @@ h2 {
         }
 
         .moyenne-aSurveiller {
-            color: var(--h2-color);
-            border-color: var(--h2-color);
+            color: #ffaf10;
+            border-color: #ffaf10;
         }
 
         .moyenne-preoccupant {
-            color: #e6002a;
-            border-color: #e6002a;
+            color: #e61f00;
+            border-color: #e61f00;
         }
 
         .niv-explication-btn {
@@ -180,6 +178,7 @@ h2 {
             justify-content: space-between;
             align-items: flex-start;
             gap:0.5rem;
+            max-width:40%;
 
             .niv-normal, .niv-aSurveiller, .niv-preoccupant {
                 font-size: 1.7rem;
@@ -191,11 +190,11 @@ h2 {
             }
 
             .niv-aSurveiller {
-                color: var(--h2-color);
+                color: #ffaf10;
             }
 
             .niv-preoccupant {
-                color: #e6002a;
+                color: #e61f00;
             }
         }
     }
@@ -215,5 +214,10 @@ h2 {
         justify-content: space-between;
         align-items: center;
         gap:0.8rem;
+
+        .niv-explication-btn {
+            gap:0.8rem;
+            max-width:100%;
+        }
     }
 }

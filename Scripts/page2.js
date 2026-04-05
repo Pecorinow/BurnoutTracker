@@ -548,7 +548,7 @@ function appliquerClasses(RESULTATS) {
   P_MOYENNE_PERS.classList.add( CLASSES_NIV_MOY[NIV_PERS].moyenne);
   P_NIV_PERS.classList.add(CLASSES_NIV_MOY[NIV_PERS].niveau); 
 
-  const NIV_POST = RESULTATS['personnel'].NIVEAU_INTERP;
+  const NIV_POST = RESULTATS['postMasking'].NIVEAU_INTERP;
   P_MOYENNE_POST.classList.add( CLASSES_NIV_MOY[NIV_POST].moyenne);
   P_NIV_POST.classList.add(CLASSES_NIV_MOY[NIV_POST].niveau);
   

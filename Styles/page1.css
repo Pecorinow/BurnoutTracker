@@ -7,24 +7,23 @@
     --h2-color :#DE3F00;
     --twilight-categoriesBurnout : #CC4510;
     --btn-light: #FF7D4A;
-    --btn-dark: #C45124;
-    --btn-border:#F39D7B;
-    --btn-mode-border : #CEEFFA;
+    --btn-dark: #e3561f;
 
     --text-a-font : "Kumbh Sans", sans-serif;
-    --h1-h2-font : "Winky Sans", sans-serif;
-    /* --h1-h2-font : "Inter", sans-serif; */
+    --h1-h2-font : "Marmelad", sans-serif;
 }
 
 main {
+
     .section-intro {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
-        gap:2.5rem;
-        padding-bottom: 2rem;
+        align-items: flex-start;
+        gap:1.5rem;
         width:80%;
+
+        
         
         .img-intro {
             display:flex;
@@ -36,14 +35,52 @@ main {
             img {
                 max-width: 300px;
             }
-            div {
+            
+            .intro-h-text {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: flex-start;
-                gap:1rem;
+                gap:1.5rem;
+
+                h2 {
+                    font-family: var(--text-a-font);
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    color: var(--twilight-text);
+                    text-align: start;
+                }
+
+                h3 {
+                    color :var(--h2-color);
+                    /* text-align: center; */
+                    /* font-style: italic; */
+                    font-weight: 400;
+                    font-size:2.1rem;
+                    font-family: var(--h1-h2-font);
+
+                }
+
+                .intro-p {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap:1rem;
+                }
             }
-        } 
+        }
+        
+        .btn-liens {
+            display:flex;
+            flex-direction:row;
+            align-items: center;
+            gap:1rem;
+            
+            a {
+                align-self: center;
+            }
+        }
     }
 
     .presentationsBurnouts {
@@ -53,6 +90,7 @@ main {
         align-items: center;
         gap:2.5rem;
         width:100%;
+        padding-bottom: 0;
 
         h2 {
             width:80%;

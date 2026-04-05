@@ -13,15 +13,10 @@
     --h2-color :#DE3F00;
     --twilight-categoriesBurnout : #CC4510;
     --btn-light: #FF7D4A;
-    --btn-dark: #C45124;
-    --btn-border:#F39D7B;
-    --btn-mode-border : #CEEFFA;
+    --btn-dark: #e3561f;
 
     --text-a-font : "Kumbh Sans", sans-serif;
-    --h1-h2-font : "Winky Sans", sans-serif;
-    /* --h1-h2-font : "Inter", sans-serif; */
-
-
+    --h1-h2-font : "Marmelad", sans-serif;
 }
 
 html {
@@ -53,8 +48,8 @@ header {
     justify-content: space-between;
     align-items: center;
     width: auto;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
     padding-top: 1%;
     padding-bottom: 1%;
     margin-top:1%;
@@ -81,6 +76,7 @@ header {
             justify-content: space-between;
             align-items: flex-end;
             font-size: 0.9rem;
+            font-weight: 600;
             gap:2rem;
 
             a {
@@ -139,23 +135,24 @@ h1 {
     color: var(--h2-color);
     font-weight: 600;
     font-size: 2rem;
-    font-family: "Winky Sans", sans-serif;
+    font-family: var(--h1-h2-font);
 }
 
 h2 {
     color :var(--h2-color);
     text-align: center;
-    font-style: italic;
+    /* font-style: italic; */
     font-weight: 400;
-    font-size:2rem;
+    font-size:2.1rem;
     font-family: var(--h1-h2-font);
-    padding-top:0.7rem;
-    padding-bottom:0.7rem;
+    /* padding-top:0.7rem; */
+    /* padding-bottom:0.7rem; */
 
 }
 
 .btn {
-    background: var(--btn-border);
+    background: #FF7D4A;
+    /* background: var(--btn-border); */
     border:none;
     border-radius: 50px;
     position: relative;
@@ -169,7 +166,8 @@ h2 {
         padding-right : 20px;
         border-radius: 50px;
         color:white;
-        background: linear-gradient(90deg, var(--btn-light), var(--btn-dark));
+        background: #e3561f;
+        /* background: linear-gradient(90deg, var(--btn-light), var(--btn-dark)); */
         text-decoration: none;
         font-family: var(--text-a-font);
         font-size:1.2rem;
@@ -247,6 +245,8 @@ main {
 section {
     width:70%;
     margin:auto;
+    padding-top:2.5rem;
+    padding-bottom: 2.5rem;
 }
 
 p {

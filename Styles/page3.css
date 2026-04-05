@@ -7,15 +7,10 @@
     --h2-color :#DE3F00;
     --twilight-categoriesBurnout : #CC4510;
     --btn-light: #FF7D4A;
-    --btn-dark: #C45124;
-    --btn-border:#F39D7B;
-    --btn-mode-border : #CEEFFA;
+    --btn-dark: #e3561f;
 
     --text-a-font : "Kumbh Sans", sans-serif;
-    --h1-h2-font : "Winky Sans", sans-serif;
-    /* --h1-h2-font : "Inter", sans-serif; */
-
-
+    --h1-h2-font : "Marmelad", sans-serif;
 }
 
 .section-recherche-psys {
@@ -23,7 +18,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap:2rem;
+    gap:3rem;
     padding-bottom: 2rem;
 
     .img-form-carte {
