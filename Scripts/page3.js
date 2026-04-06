@@ -148,6 +148,7 @@ FORM_PSYS.addEventListener('submit', async function(event) {
     // -------------------------
     // F. Afficher la carte
     // -------------------------
+    document.getElementById('carte').style.display = 'block';
     afficherCarte(LAT_USER, LON_USER, PSYS_DANS_RAYON);
 
 });

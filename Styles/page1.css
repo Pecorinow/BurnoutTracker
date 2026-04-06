@@ -231,61 +231,49 @@ main {
     }
 }
 
-/**--------------------*/
-/** Mediaquery 1100px : */
-/**--------------------*/
-
-@media (max-width:959px) {
-    main .section-intro .img-intro {
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        align-items: center;
-        gap:2rem;
-
-        img {
-            max-width: 50%;
-        }
-    }
-}
 
 /**--------------------*/
 /** Mediaquery 959px : */
 /**--------------------*/
 
 @media (max-width:959px) {
-    main .presentationsBurnouts .categoriesBurnout .catPro {
-            display:flex;
-            flex-direction:column;            
-            gap:1rem;
-    }
-    main .presentationsBurnouts .categoriesBurnout .catRel {
-        display:flex;
-        flex-direction:column;            
-        gap:1rem;
-    }
-    main .presentationsBurnouts .categoriesBurnout .catPost {
-        display:flex;
-        flex-direction:column;            
-        gap:1rem;
-    }
-
-    main .presentationsBurnouts .categoriesBurnout .catPar {
-        display:flex;
-        flex-direction:column;
-        gap:1rem;
-    }
-    main .presentationsBurnouts .categoriesBurnout .catPers {
-        display:flex;
-        flex-direction:column;
-        gap:1rem;
-    }
-
-    main .presentationsBurnouts .categoriesBurnout .categorie {
-        padding-left:0rem;
-        padding-right:0rem;
-
-        .icone-h3-img .icone-h3 {
+    main {
+         .section-intro .img-intro {
+            flex-direction: column-reverse;
+            justify-content: space-between;
             align-items: center;
+            gap:2rem;
+
+            img {
+                max-width: 50%;
+            }
         }
+
+        .presentationsBurnouts .categoriesBurnout {
+            .catPro, .catRel, .catPost, .catPar, .catPers {
+                display:flex;
+                flex-direction:column;            
+                gap:1rem;
+            }
+            .categorie {
+                padding-left:0rem;
+                padding-right:0rem;
+
+                .icone-h3-img .icone-h3 {
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+/**--------------------*/
+/** Mediaquery 510px : */
+/**--------------------*/
+
+@media (max-width:510px) {
+    main .section-intro .btn-liens {
+        flex-direction: column;
+
     }
 }

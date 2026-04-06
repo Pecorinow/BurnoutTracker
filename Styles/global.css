@@ -56,7 +56,7 @@ header {
     margin-right: 2%;
     margin-bottom:2rem;
     margin-left:2%;
-    gap:3rem;
+    gap:1rem;
 
     .logo-titre {
         display: flex;
@@ -99,10 +99,6 @@ header {
                 transform-origin: bottom center;
             }
 
-            a:hover::after {
-                transform: scaleX(1);
-                transform-origin: bottom center;
-            }
     }
 
     .buttons-mode-burger {
@@ -321,10 +317,7 @@ footer {
                     transform-origin: bottom center;
                 }
 
-                a:hover::after {
-                    transform: scaleX(1);
-                    transform-origin: bottom center;
-                }
+                
             }
         }
 
@@ -347,8 +340,9 @@ footer {
 /**--------------------*/
 
 @media (hover: hover) {
-    a:hover::after {
+    header nav a:hover::after, footer .footer-logo-titre-nav .titre-nav nav a:hover::after {
         transform: scaleX(1);
+        transform-origin: bottom center;
     }
 
     .btn:hover .front {
@@ -361,25 +355,26 @@ footer {
 }
 
 /**--------------------*/
-/** Mediaquery 959px : */
+/** Mediaquery 1024px : */
 /**--------------------*/
 
-@media (max-width:959px) {
+@media (max-width:1024px) {
     header {
         nav {
             position: fixed;
             top: 0;
             right: 0;
-            height: 100vh;
+            height: 100dvh;
             width: 70%;
             background-color: var(--twilight-header-dark);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            gap: 2rem;
+            gap: 3rem;
             padding: 1rem;
             z-index: 1000;
+            overflow:hidden;
             transform: translateX(100%);
             transition: transform 0.3s ease-in-out;
 
@@ -388,7 +383,7 @@ footer {
             }
 
             a::after {
-                color:white;
+                background-color:white;
             }
         }
 
@@ -413,10 +408,10 @@ footer {
 }
 
 /**--------------------*/
-/** Mediaquery 500px : */
+/** Mediaquery 510px : */
 /**--------------------*/
 
-@media (max-width:500px) {
+@media (max-width:510px) {
     header {
         padding-top:1rem;
         padding-bottom: 1rem;
@@ -432,6 +427,11 @@ footer {
                 font-size: 1.5rem;
             }
         }
+
+        nav {
+            width:100%;
+        }
+
     }
 }
 
@@ -445,9 +445,9 @@ footer {
         .logo-titre{
             gap:0.5rem;
         }
-        .buttons-mode-burger {
+        /* .buttons-mode-burger {
             gap:8rem;
-        }
+        } */
     }
     
     

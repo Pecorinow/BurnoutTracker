@@ -72,6 +72,13 @@ h2 {
                 flex-direction: row;
                 gap: 1rem;
                 padding:0.5rem;
+
+                input[type="radio"] {
+                    accent-color: var(--btn-dark);
+                    width:1.1rem;
+                    height:1.1rem;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -180,6 +187,10 @@ h2 {
             gap:0.5rem;
             max-width:40%;
 
+            a {
+                margin-top:0.5rem;
+            }
+
             .niv-normal, .niv-aSurveiller, .niv-preoccupant {
                 font-size: 1.7rem;
                 font-weight: 500;
@@ -201,23 +212,31 @@ h2 {
 }
 
 /**--------------------*/
-/** Mediaquery 959px : */
+/** Mediaquery 1024px : */
 /**--------------------*/
 
-@media (max-width:959px) {
+@media (max-width:1024px) {
     .section-test {
     width: 90%;
-    }
-    .section-resultats-show .resultats {
-        display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap:0.8rem;
 
-        .niv-explication-btn {
+    }
+    .section-resultats-show {
+        gap:3rem;
+
+        .resultats {
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
             gap:0.8rem;
-            max-width:100%;
+
+            .niv-explication-btn {
+                gap:0.8rem;
+                max-width:100%;
+                align-items: center;
+            }
         }
     }
+    
+    
 }
