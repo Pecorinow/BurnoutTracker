@@ -1,5 +1,5 @@
 //*---------------------------
-//* Tableau du questionnaire :
+//* 1. Tableau du questionnaire :
 //*---------------------------
 
 const QUESTIONNAIRE = [
@@ -251,7 +251,7 @@ const QUESTIONNAIRE = [
 ];
 
 //*---------------------------------------------
-//* Objet des types de réponses : 
+//* 2. Objet des types de réponses : 
 //*---------------------------------------------
 
 const TYPES_REPONSES = {
@@ -279,7 +279,7 @@ const TYPES_REPONSES = {
 };
 
 //*-------------------------------------------
-// * Remplir le HTML du questionnaire : Boucle forEAch et fonction générerQuestionnaire :
+//* 3. Remplir le HTML du questionnaire : Boucle forEAch et fonction générerQuestionnaire :
 //*-------------------------------------------
 const FORM_QUESTIONNAIRE = document.getElementById('form-questionnaire');
 
@@ -326,7 +326,7 @@ function genererQuestionnaire (questionObj, index) {
 };
 
 //*--------------------------
-//*Valider le questionnaire :
+//* 4.Valider le questionnaire :
 //*--------------------------
 
 // Fonction validerQuestionnaire :
@@ -350,7 +350,7 @@ function validerQuestionnaire() {
 };
 
 //*--------------------------------------
-//* Variables de la section d'affichage :
+//* 5. Variables de la section d'affichage :
 //*--------------------------------------
 
 const P_CAT_PRO = document.getElementById('p-cat-pro');
@@ -380,9 +380,9 @@ const P_EXPLIC_POST = document.getElementById('p-explic-post');
 
 console.log(P_CAT_PRO, P_MOYENNE_PRO, P_NIV_PRO, P_EXPLIC_PRO, P_CAT_PRO, P_MOYENNE_PAR, P_NIV_PAR, P_EXPLIC_PAR, P_CAT_REL, P_MOYENNE_REL, P_NIV_REL, P_EXPLIC_REL, P_CAT_PERS, P_MOYENNE_PERS, P_NIV_PERS, P_EXPLIC_PERS, P_CAT_POST, P_MOYENNE_POST, P_NIV_POST, P_EXPLIC_POST);
 
-//*--------------------------
-//* Récupérer les réponses :
-//*--------------------------
+//*----------------------------
+//* 6. Récupérer les réponses :
+//*----------------------------
 
 function recupReponses() {
     const RADIO_COCHES = document.querySelectorAll('input[type="radio"]:checked');
@@ -399,15 +399,14 @@ function recupReponses() {
 };
 
 
-//*-----------------------
-// * Calculer les scores :
-//*-----------------------
+//*---------------------------
+//* 6.B. Calculer les scores :
+//*---------------------------
 
 function calculerScores(REPONSES) { 
 
     const CAT_SCORES = {};
   
-  //*2) Parcours des questions :
     QUESTIONNAIRE.forEach(questionObj => {
       
       const VALEUR = REPONSES[questionObj.id]; 
@@ -463,9 +462,9 @@ function calculerScores(REPONSES) {
     afficherResultats(RESULTATS);
 };
 
-//*-------------------------
-//* Renvoyer les résultats :
-//*-------------------------
+//*------------------------------
+//* 6.C. Renvoyer les résultats :
+//*------------------------------
 
 
 function afficherResultats(RESULTATS) {
@@ -500,7 +499,7 @@ function afficherResultats(RESULTATS) {
 
 
 //*----------------------------
-//* Fonction appliquerClasses :
+//* 6.D. Fonction appliquerClasses :
 //*----------------------------
 
 function appliquerClasses(RESULTATS) {
@@ -555,8 +554,9 @@ function appliquerClasses(RESULTATS) {
 };
 
 
-//--------------------------------------------
-//* Bouton RESULTATS : //--------------------------------------------
+//*----------------------
+//* 7.Bouton RESULTATS :
+//*----------------------
 
 const BTN_RESULTS = document.getElementById('btn-resultats');
 const SECTION_RESULTATS = document.getElementById('section-resultats');
